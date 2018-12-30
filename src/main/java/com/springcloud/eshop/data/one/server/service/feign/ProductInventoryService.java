@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient(value = "product-inventories-server", fallback = ProductInventoryServiceImpl.class)
 public interface ProductInventoryService {
 
-    @GetMapping("/findProductInventoryByProductId")
+    @GetMapping("/product-inventory/findProductInventoryByProductId")
     ServerResponse findProductInventoryByProductId(@RequestParam("productId") String productId);
 
 }
